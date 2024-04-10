@@ -1,0 +1,17 @@
+﻿@model IEnumerable<AspNet.MVC.Models.Book>
+
+<h1>Books:</h1>
+
+<ul>
+    @foreach (var book in Model)
+    {
+        <li>
+            <b>Title:</b> @book.Title<br />
+            <b>Genre:</b> @book.Genre<br />
+            <b>Release Date:</b> @book.ReleaseDate<br />
+            <b>Author:</b> @book.Author.Name @book.Author.Surname<br />
+            <b>Author's DOB:</b> @book.Author.DOB<br />
+            <br />
+        </li>
+    }
+</ul>
